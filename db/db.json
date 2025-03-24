@@ -1,0 +1,57 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "productName": "Gel Pen",
+            "price": "25",
+            "details": "A smooth gel pen with waterproof ink, ergonomic grip, and stylish body, perfect for precise writing.",
+            "star": 4,
+            "images": [
+                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+            ]
+        },
+        {
+            "id": "2",
+            "productName": "Spiral Notebook",
+            "price": "60",
+            "details": "A 250-page spiral-bound notebook with a sturdy cover, great for students and professionals.",
+            "star": 5,
+            "images": [
+                "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+            ]
+        },
+        {
+            "id": "3",
+            "productName": "Sketchbook",
+            "price": "80",
+            "details": "A high-quality sketchbook with 100 thick pages, ideal for artists and designers.",
+            "star": 3,
+            "images": [
+                "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
+                "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+            ]
+        },
+        {
+            "id": "4",
+            "productName": "Diary",
+            "price": "100",
+            "details": "A premium leather-bound diary with 365 pages for daily journaling and note-keeping.",
+            "star": 5,
+            "images": [
+                "https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+            ]
+        }
+    ],
+    "login": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "1234"
+        },
+        {
+            "id": 2,
+            "username": "Student",
+            "password": "1234"
+        }
+    ]
+}
