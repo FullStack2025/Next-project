@@ -1,57 +1,214 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": "1",
+      "productName": "House",
+      "price": "999",
+      "details": "A smooth gel pen with waterproof ink, ergonomic grip, and stylish body, perfect for precise writing.",
+      "star": "5",
+      "brand": "Zudio",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [
+        "#000000",
+        "#FF0000",
+        "#0000FF"
+      ],
+      "sizes": [
+        "Fine",
+        "Medium",
+        "Bold"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+      ],
+      "reviews": [
         {
-            "id": "1",
-            "productName": "Gel Pen",
-            "price": "25",
-            "details": "A smooth gel pen with waterproof ink, ergonomic grip, and stylish body, perfect for precise writing.",
-            "star": 4,
-            "images": [
-                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
-            ]
-        },
-        {
-            "id": "2",
-            "productName": "Spiral Notebook",
-            "price": "60",
-            "details": "A 250-page spiral-bound notebook with a sturdy cover, great for students and professionals.",
-            "star": 5,
-            "images": [
-                "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
-            ]
-        },
-        {
-            "id": "3",
-            "productName": "Sketchbook",
-            "price": "80",
-            "details": "A high-quality sketchbook with 100 thick pages, ideal for artists and designers.",
-            "star": 3,
-            "images": [
-                "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
-                "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
-            ]
-        },
-        {
-            "id": "4",
-            "productName": "Diary",
-            "price": "100",
-            "details": "A premium leather-bound diary with 365 pages for daily journaling and note-keeping.",
-            "star": 5,
-            "images": [
-                "https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
-            ]
+          "name": "ARK Customer",
+          "avatar": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1734628863/portfolio/mvsefulf9mimzumpbo0o.jpg",
+          "rating": 4,
+          "comment": "Great pen for writing, smooth ink flow!",
+          "date": "Yesterday"
         }
-    ],
-    "login": [
+      ]
+    },
+    {
+      "id": "2",
+      "productName": "Spiral Notebook",
+      "price": "60",
+      "details": "A 250-page spiral-bound notebook with a sturdy cover, great for students and professionals.",
+      "star": "2",
+      "brand": "Zudio",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [
+        "#FFFFFF",
+        "#000000",
+        "#FFFF00"
+      ],
+      "sizes": [
+        "A4",
+        "A5",
+        "B5"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
+        "https://tech.co.za/wp-content/uploads/2022/06/Dell-XSP-15-9520-v2.png",
+        "https://i2.wp.com/laptopmedia.com/wp-content/uploads/2021/05/2-6-e1620735776663.jpg?fit=662%2C386&ssl=1",
+        "https://th.bing.com/th/id/OIP.tsxGIoy-gGx8aZ9p9rHY5AHaET?pid=ImgDet&w=206&h=119&c=7&dpr=1.1"
+      ],
+      "reviews": [
         {
-            "id": 1,
-            "username": "admin",
-            "password": "1234"
-        },
-        {
-            "id": 2,
-            "username": "Student",
-            "password": "1234"
+          "name": "John Doe",
+          "avatar": "https://via.placeholder.com/40",
+          "rating": 5,
+          "comment": "Perfect notebook for my notes!",
+          "date": "2 days ago"
         }
-    ]
+      ]
+    },
+    {
+      "id": "3",
+      "productName": "Sketchbook",
+      "price": "80",
+      "details": "A high-quality sketchbook with 100 thick pages, ideal for artists and designers.",
+      "star": 3,
+      "brand": "Zudio",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [
+        "#FFFFFF",
+        "#F0F0F0"
+      ],
+      "sizes": [
+        "A4",
+        "A5"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
+        "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+      ],
+      "reviews": [
+        {
+          "name": "Jane Smith",
+          "avatar": "https://via.placeholder.com/40",
+          "rating": 3,
+          "comment": "Good paper quality but binding could be better.",
+          "date": "3 days ago"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "productName": "Diary",
+      "price": "100",
+      "details": "A premium leather-bound diary with 365 pages for daily journaling and note-keeping.",
+      "star": 5,
+      "brand": "Zudio",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [
+        "#8B4513",
+        "#000000"
+      ],
+      "sizes": [
+        "A5",
+        "A6"
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
+      ],
+      "reviews": [
+        {
+          "name": "Alice Brown",
+          "avatar": "https://via.placeholder.com/40",
+          "rating": 5,
+          "comment": "Love the leather cover, very premium feel!",
+          "date": "1 week ago"
+        }
+      ]
+    },
+    {
+      "id": "1742886880656",
+      "productName": "pipes",
+      "price": "10000",
+      "details": "1ssassad",
+      "star": 4,
+      "brand": "tata",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [
+        "blue",
+        "green"
+      ],
+      "sizes": [
+        "A5",
+        "Sm"
+      ],
+      "images": [
+        "https://th.bing.com/th/id/OIP.ACnbd0i93iFFtwgs47kGUAAAAA?rs=1&pid=ImgDetMain"
+      ],
+      "reviews": []
+    },
+    {
+      "id": "1742888377503",
+      "productName": "gui",
+      "price": "122",
+      "details": "sdkjfsjncjkzxcjlb lhbw j wjhbwjhfbwjcbjb jbfjbjsdb",
+      "star": "2",
+      "brand": "Zudio",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [],
+      "sizes": [
+        "A5",
+        "Sm"
+      ],
+      "images": [
+        "https://th.bing.com/th/id/OIP.niegWSqMeLPgOpNxNIKNPgHaEK?rs=1&pid=ImgDetMain"
+      ],
+      "reviews": [
+        {
+          "name": "huy",
+          "rating": 5,
+          "comment": "kjjjh",
+          "avatar": "https://via.placeholder.com/40",
+          "date": "2025-03-25"
+        }
+      ]
+    },
+    {
+      "id": "1742889107474",
+      "productName": "sdsadasd",
+      "price": "2522",
+      "details": "sdkjfsjncjkzxcjlb lhbw j wjhbwjhfbwjcbjb jbfjbjsdb",
+      "star": "3",
+      "brand": "Zudio",
+      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
+      "colors": [],
+      "sizes": [
+        "A5",
+        "Sm"
+      ],
+      "images": [
+        "https://i.ytimg.com/vi/OqCAgtG7RIM/maxresdefault.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "https://via.placeholder.com/40",
+          "rating": 4,
+          "comment": "https://via.placeholder.com/40",
+          "avatar": "https://via.placeholder.com/40",
+          "date": "2025-03-25"
+        }
+      ]
+    }
+  ],
+  "login": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "username": "Student",
+      "password": "1234"
+    }
+  ]
 }

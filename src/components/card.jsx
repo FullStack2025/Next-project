@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation"; // Import useRouter
+import Link from 'next/link'
 
 const ProductCard = ({productName,price,details,id,star,images}) => {
     const router = useRouter(); // Initialize router
@@ -7,7 +8,19 @@ const ProductCard = ({productName,price,details,id,star,images}) => {
     const handleBuyNow = () => {
         router.push(`/products/${id}`); // Redirect to product details page
       };
-      
+        // Fallback image
+  const fallbackImage = "/error.webp"; // Ensure this exists in /public
+
+  // Logic to determine the image source
+  let imageSrc = fallbackImage; // Default to fallback
+  if (Array.isArray(images) && images.length > 0) {
+    try {
+      new URL(images[0]); // Test if images[0] is a valid URL
+      imageSrc = images[0]; // If valid, use it
+    } catch {
+      imageSrc = fallbackImage; // If invalid, stick with fallback
+    }
+  }
   return (
     <div className="flex ">
       <div className="w-80 border border-blue-200 rounded-lg shadow-md p-4">
@@ -36,8 +49,8 @@ const ProductCard = ({productName,price,details,id,star,images}) => {
           {/* Product Image */}
           <div>
             <Image
-              src={images[0]}
-              alt="Product Image"
+        src={imageSrc}
+        alt="Product Image"
               className="object-contain w-full h-[270px]"
               width={320}
               height={270}
@@ -83,14 +96,15 @@ const ProductCard = ({productName,price,details,id,star,images}) => {
               </span>
               <span className="text-gray-400 text-sm line-through">$1500.00</span>
             </div>
-            <button 
+            {/* <button 
                           onClick={handleBuyNow} // Add onClick event for redirection
 
             className="  flex items-center justify-center shadow text-black" style={{border:"1px solid black",borderRadius:"10px",padding:"5px"}}>
                buy now
-            </button>
+            </button> */}
+            <Link href={`/products/${id}`}>Buy Now</Link>
           </div>
-        </div>
+        </div>    
       </div>
     </div>
   );

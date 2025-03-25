@@ -6,17 +6,17 @@ import ProductCard from "../components/card"
 function Page() {
   const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:1458/products")
-  //     .then((response) => {
-  //       setProducts(response.data); // Extract the `data` property
-  //       console.log(response.data[0].id); // This works only when data is received
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching products:", error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:1458/products")
+      .then((response) => {
+        setProducts(response.data); // Extract the `data` property
+        console.log(response.data[0].id); // This works only when data is received
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      });
+  }, []);
   
   const fetchData = async () => {
     try {
@@ -46,11 +46,11 @@ function Page() {
     // }, []);
   return (
     <>
-      {/* <Carousel /> */}
-        <p>
-            { products[0]?.details}
-        </p>
-        <div style={{display:"flex",justifyContent:"space-between"}}>
+      <Carousel />
+        {/* <p>
+            { products[0]?.details}     for yor referance
+        </p> */}
+        <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}}>
         { products.map((products)=>(
             
             <ProductCard key={products.id} {...products}/>
