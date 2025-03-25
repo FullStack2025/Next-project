@@ -126,27 +126,6 @@
       ]
     },
     {
-      "id": "1742886880656",
-      "productName": "pipes",
-      "price": "10000",
-      "details": "1ssassad",
-      "star": 4,
-      "brand": "tata",
-      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
-      "colors": [
-        "blue",
-        "green"
-      ],
-      "sizes": [
-        "A5",
-        "Sm"
-      ],
-      "images": [
-        "https://th.bing.com/th/id/OIP.ACnbd0i93iFFtwgs47kGUAAAAA?rs=1&pid=ImgDetMain"
-      ],
-      "reviews": []
-    },
-    {
       "id": "1742888377503",
       "productName": "gui",
       "price": "122",
@@ -167,32 +146,6 @@
           "name": "huy",
           "rating": 5,
           "comment": "kjjjh",
-          "avatar": "https://via.placeholder.com/40",
-          "date": "2025-03-25"
-        }
-      ]
-    },
-    {
-      "id": "1742889107474",
-      "productName": "sdsadasd",
-      "price": "2522",
-      "details": "sdkjfsjncjkzxcjlb lhbw j wjhbwjhfbwjcbjb jbfjbjsdb",
-      "star": "3",
-      "brand": "Zudio",
-      "brandImage": "https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp",
-      "colors": [],
-      "sizes": [
-        "A5",
-        "Sm"
-      ],
-      "images": [
-        "https://i.ytimg.com/vi/OqCAgtG7RIM/maxresdefault.jpg"
-      ],
-      "reviews": [
-        {
-          "name": "https://via.placeholder.com/40",
-          "rating": 4,
-          "comment": "https://via.placeholder.com/40",
           "avatar": "https://via.placeholder.com/40",
           "date": "2025-03-25"
         }

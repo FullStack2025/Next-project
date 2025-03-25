@@ -24,7 +24,7 @@ export default function EditProduct() {
   }, []);
 
   const openDialog = (product) => {
-    setSelectedProduct({ ...product }); // Deep copy to avoid mutating original
+    setSelectedProduct({ ...product });
     setIsDialogOpen(true);
   };
 
@@ -51,6 +51,17 @@ export default function EditProduct() {
     }
   };
 
+  const handleDelete = async (productId) => {
+    if (confirm("Are you sure you want to delete this product?")) {
+      try {
+        await axios.delete(`http://localhost:1458/products/${productId}`);
+        setProducts(products.filter((p) => p.id !== productId));
+      } catch (error) {
+        console.error("Error deleting product:", error);
+      }
+    }
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setSelectedProduct((prev) => ({
@@ -61,8 +72,7 @@ export default function EditProduct() {
 
   if (loading) return <div className="container mx-auto px-4 py-8">Loading...</div>;
 
-  // Fallback image
-  const fallbackImage = "/error.webp"; // Ensure this exists in /public
+  const fallbackImage = "/error.webp";
 
   return (
     <div>
@@ -90,7 +100,6 @@ export default function EditProduct() {
               </thead>
               <tbody className="text-gray-600 dark:text-gray-400 text-sm font-light">
                 {products.map((product) => {
-                  // Validate image URL
                   let imageSrc = fallbackImage;
                   if (Array.isArray(product.images) && product.images.length > 0 && product.images[0]) {
                     try {
@@ -101,7 +110,6 @@ export default function EditProduct() {
                     }
                   }
 
-                  // Ensure colors, sizes, and images are arrays
                   const colors = Array.isArray(product.colors) ? product.colors : product.colors ? product.colors.split(",").map(c => c.trim()) : [];
                   const sizes = Array.isArray(product.sizes) ? product.sizes : product.sizes ? product.sizes.split(",").map(s => s.trim()) : [];
                   const images = Array.isArray(product.images) ? product.images : product.images ? product.images.split(",").map(i => i.trim()) : [];
@@ -148,12 +156,20 @@ export default function EditProduct() {
                           : "No reviews"}
                       </td>
                       <td className="py-3 px-6 text-center">
-                        <button
-                          onClick={() => openDialog(product)}
-                          className="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600"
-                        >
-                          Edit
-                        </button>
+                        <div className="flex justify-center gap-2">
+                          <button
+                            onClick={() => openDialog(product)}
+                            className="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            onClick={() => handleDelete(product.id)}
+                            className="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600"
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   );
@@ -164,7 +180,6 @@ export default function EditProduct() {
         )}
       </main>
 
-      {/* Dialog/Modal */}
       {isDialogOpen && selectedProduct && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-md w-full">
@@ -251,7 +266,6 @@ export default function EditProduct() {
                   className="w-full p-2 border rounded dark:bg-gray-700 dark:text-white"
                 />
               </div>
-              {/* Reviews editing could be complex; skipping for simplicity */}
               <div className="flex justify-end gap-2">
                 <button
                   type="button"
