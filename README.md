@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+"use client";
+import React, { useState } from "react";
+import axios from "axios";
+function Page() {
+  let [productName, setProductName] = useState("");
+  let [price, setPrice] = useState("");
+  let [image, setImage] = useState("");
+  let [details, setDetails] = useState("");
+  let [stars, setStars] = useState("");
 
-## Getting Started
+async function handilesubmit(e){
+ e.preventDefault();
+ try{
+    let data = await axios.post("http://localhost:5000/products",
+        {
+            productName,
+            price,
+            image,
+            details,
+            stars,
+          }
+    )
+    console.log(data)
+ }
+ catch(err){
+console.log(err)
+ }
+}
 
-First, run the development server:
+  return (
+    <div style={{ padding: "5%", display: "flex", flexDirection: "column", gap: "10px" }}>
+    <form  onSubmit={handilesubmit}>
+      <input
+        type="text"
+        placeholder="Product Name"
+        value={productName}
+        onChange={(e) => setProductName(e.target.value)}
+        style={{ border: "1px solid black", padding: "8px" }}
+      />
+    <br />
+      <input
+        type="number"
+        placeholder="Price"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+        style={{ border: "1px solid black", padding: "8px" }}
+      />
+     <br />
+      <input
+        type="text"
+        placeholder="Image URL"
+        value={image}
+        onChange={(e) => setImage(e.target.value)}
+        style={{ border: "1px solid black", padding: "8px" }}
+      />
+     <br />
+      <textarea
+        placeholder="Details"
+        value={details}
+        onChange={(e) => setDetails(e.target.value)}
+        style={{ border: "1px solid black", padding: "8px", height: "100px" }}
+      />
+      <br />
+      <input
+        type="number"
+        placeholder="Stars (Rating)"
+        value={stars}
+        onChange={(e) => setStars(e.target.value)}
+        style={{ border: "1px solid black", padding: "8px" }}
+      />
+    <br />
+      <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+export default Page;
